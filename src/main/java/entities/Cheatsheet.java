@@ -10,17 +10,17 @@ import javax.persistence.*;
 @Getter
 @Setter
 @RequiredArgsConstructor
-@Table(name="language")
+@Table(name="cheatsheet")
 public class Cheatsheet {
 
 	@Id
 	@GeneratedValue(strategy= GenerationType.IDENTITY)
-	private long id;
-	
+	private Integer id;
+	@Column(name="code_language")
 	private String codeLanguage;
-	
+	@Column(name="cheat_method")
 	private String cheatMethod;
-	
+	@Column(name="cheat_body")
 	private String cheatBody;
 	
 }
