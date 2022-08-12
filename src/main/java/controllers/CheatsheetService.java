@@ -18,4 +18,9 @@ public class CheatsheetService {
     public List<Cheatsheet> getAllCheats() {
         return this.repo.findAll();
     }
+
+    public Cheatsheet createCheat(Cheatsheet cheat) {
+        Cheatsheet newCheatsheet = this.repo.save(cheat);
+        return newCheatsheet;
+    }
 }

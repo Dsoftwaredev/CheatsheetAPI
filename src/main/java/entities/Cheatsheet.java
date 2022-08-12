@@ -14,8 +14,8 @@ import javax.persistence.*;
 public class Cheatsheet {
 
 	@Id
-	@GeneratedValue(strategy= GenerationType.IDENTITY)
-	private Integer id;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
 	@Column(name="code_language")
 	private String codeLanguage;
 	@Column(name="cheat_method")

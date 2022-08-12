@@ -3,6 +3,8 @@ package controllers;
 import entities.Cheatsheet;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -20,6 +22,11 @@ public class CheatsheetController {
     @GetMapping("/getall")
     public List<Cheatsheet> getAllCheats() {
         return this.service.getAllCheats();
+    }
+
+    @PostMapping("/cheats")
+    public Cheatsheet createCheat(@RequestBody Cheatsheet cheat) {
+        return this.service.createCheat(cheat);
     }
 
 
