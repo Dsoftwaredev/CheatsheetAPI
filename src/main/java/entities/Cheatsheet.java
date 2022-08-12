@@ -4,25 +4,23 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Getter
 @Setter
 @RequiredArgsConstructor
-
-public class Language {
+@Table(name="cheatsheet")
+public class Cheatsheet {
 
 	@Id
-	@GeneratedValue
-	private long id;
-	
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	@Column(name="code_language")
 	private String codeLanguage;
-	
+	@Column(name="cheat_method")
 	private String cheatMethod;
-	
+	@Column(name="cheat_body")
 	private String cheatBody;
 	
 }
