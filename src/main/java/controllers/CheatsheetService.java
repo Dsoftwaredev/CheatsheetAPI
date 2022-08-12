@@ -45,6 +45,15 @@ public class CheatsheetService {
         }
         Cheatsheet updatedCheat = this.repo.save(CheatToUpdate);
         return updatedCheat;
+    }
 
+    public Cheatsheet deleteCheat(Long id) {
+        Optional<Cheatsheet> cheatToDeleteOptional = this.repo.findById(id);
+        if (!cheatToDeleteOptional.isPresent()) {
+            return null;
+        }
+        Cheatsheet cheatToDelete = cheatToDeleteOptional.get();
+        this.repo.delete(cheatToDelete);
+        return cheatToDelete;
     }
 }

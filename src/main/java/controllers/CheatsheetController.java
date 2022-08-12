@@ -17,7 +17,7 @@ public class CheatsheetController {
         this.service = service;
     }
 
-    @GetMapping("/getall")
+    @GetMapping("/cheats")
     public List<Cheatsheet> getAllCheats() {
         return this.service.getAllCheats();
     }
@@ -31,7 +31,10 @@ public class CheatsheetController {
     @ResponseStatus(HttpStatus.OK)
     public Cheatsheet updateCheat(@PathVariable("id") Long id, @RequestBody Cheatsheet cheat) {
         return this.service.updateCheat(id, cheat);
-
+    }
+    @DeleteMapping("/cheats/{id}")
+    public Cheatsheet deleteCheat(@PathVariable("id") Long id) {
+        return this.service.deleteCheat(id);
     }
 
 }
