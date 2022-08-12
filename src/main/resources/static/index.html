@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Valhalla Cheatsheets</title>
     <link rel="stylesheet" href="style.css">
-    <script defer src="displaycheats.js"></script>
+    <script defer src="createcheat.js"></script>
+    <script defer src="displayCheats.js"></script>
+    <script defer src="updatecheat.js"></script>
 </head>
 <body>
 
@@ -18,6 +20,40 @@
 <div id="responseField">
 
 </div>
+
+<div id="addform">
+    <form id=""cheatForm>
+        <label for="name">Programming Language</label>
+        <input type="text" id="name" name="name" placeholder="Enter A Programming Language..">
+
+        <label for="cheatMethod">Cheat Method</label>
+        <input type="text" id="cheatMethod" name="cheatMethod" placeholder="Enter The Cheat Method..">
+
+        <label for="cheatBody">The Cheat</label>
+        <input type="text" id="cheatBody" name="cheatBody" placeholder="Enter The Cheat..">
+
+
+        <input type="submit" value="Submit" id="cheatform" >
+    </form>
+</div>
+<div id="updateform">
+    <form id=cheatupdate">
+        <label for="id">ID</label>
+        <input type="number" name="id" id="updateid">
+        <label for="updatename">Programming Language</label>
+        <input type="text" id="updatename" name="updatename" placeholder="Enter A Programming Language..">
+
+        <label for="updatemethod">Cheat Method</label>
+        <input type="text" id="updatemethod" name="updatemethod" placeholder="Enter The Cheat Method..">
+
+        <label for="updateBody">The Cheat</label>
+        <input type="text" id="updateBody" name="updateBody" placeholder="Enter The Cheat..">
+
+
+        <input type="submit" value="Submit" id="updateformcheat" >
+    </form>
+</div>
+
 
 </body>
 </html>
