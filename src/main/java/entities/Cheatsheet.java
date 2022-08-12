@@ -13,6 +13,13 @@ import javax.persistence.*;
 @Table(name="cheatsheet")
 public class Cheatsheet {
 
+	public Cheatsheet(Long id, String codeLanguage, String cheatMethod, String cheatBody) {
+		this.id = id;
+		this.codeLanguage = codeLanguage;
+		this.cheatMethod = cheatMethod;
+		this.cheatBody = cheatBody;
+	}
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
@@ -22,5 +29,7 @@ public class Cheatsheet {
 	private String cheatMethod;
 	@Column(name="cheat_body")
 	private String cheatBody;
-	
-}
+
+
+	}
+
