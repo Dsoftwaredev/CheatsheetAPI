@@ -6,10 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Valhalla Cheatsheets</title>
     <link rel="stylesheet" href="style.css">
-    <script defer src="createcheat.js"></script>
-    <script defer src="displayCheats.js"></script>
-    <script defer src="updatecheat.js"></script>
-    <script defer src="deletecheat.js"></script>
+    <script defer src="cheats.js"></script>
+
 </head>
 <body>
 
@@ -23,18 +21,18 @@
 </div>
 
 <div id="addform">
-    <form id=""cheatForm>
+    <form id="add">
         <label for="name">Programming Language</label>
-        <input type="text" id="name" name="name" placeholder="Enter A Programming Language..">
+        <input type="text" id="cheatname" name="name" placeholder="Enter A Programming Language..">
 
         <label for="cheatMethod">Cheat Method</label>
-        <input type="text" id="cheatMethod" name="cheatMethod" placeholder="Enter The Cheat Method..">
+        <input type="text" id="cheatmth" name="cheatMethod" placeholder="Enter The Cheat Method..">
 
         <label for="cheatBody">The Cheat</label>
-        <input type="text" id="cheatBody" name="cheatBody" placeholder="Enter The Cheat..">
+        <input type="text" id="cheatbod" name="cheatBody" placeholder="Enter The Cheat..">
 
 
-        <input type="submit" value="Submit" id="cheatform" >
+        <input type="submit" value="Submit" id="cheatform" onclick="postCheats()" >
     </form>
 </div>
 <div id="updateform">
@@ -59,7 +57,7 @@
         <h1>Delete Cheat</h1>
         <label for="deleteCheatID">Enter ID of cheat to delete</label>
         <input type="number" name="deleteCheatID" id="deleteCheatID">
-        <input type="submit" value="delete" id="deletec">
+        <input type="submit" value="delete" id="deletec" onclick="deleteCheat()">
     </form>
 </div>
 
