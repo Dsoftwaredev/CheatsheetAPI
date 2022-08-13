@@ -26,7 +26,7 @@ import org.springframework.test.web.servlet.MockMvc;
 
 @SpringBootTest(classes= {CheatsheetApiApplication.class, CheatsheetController.class})
 @AutoConfigureMockMvc
-
+@ActiveProfiles("test")
 public class CheatsheetControllerTest {
 
     @Autowired
@@ -42,8 +42,8 @@ public class CheatsheetControllerTest {
         return mapper.map(cheatsheet, CheatsheetDTO.class);
     }
 
-    private final Long TEST_CREATEID = 6L;
-    private final Cheatsheet TEST_CREATECheat = new Cheatsheet(null, "", "Tim Burton", "console.log");
+    private final Long TEST_CREATEID = 1L;
+    private final Cheatsheet TEST_CREATECheat = new Cheatsheet(null, "java", "print", "console.log");
 
     @BeforeEach
     public void dbWipe() {
@@ -53,7 +53,7 @@ public class CheatsheetControllerTest {
     @Test
     public void testCreate() {
         Cheatsheet expected = TEST_CREATECheat;
-        expected.setId(TEST_CREATEID);
+        expected.setId(1L);
         try {
 
             mock.perform(post("/cheats").accept(MediaType.APPLICATION_JSON).contentType(MediaType.APPLICATION_JSON)
