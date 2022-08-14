@@ -42,9 +42,7 @@ public class UsersService {
         if (users.getName() != null) {
             userToUpdate.setName(users.getName());
         }
-        if (users.getBalance() != null) {
-            userToUpdate.setBalance(users.getBalance());
-        }
+
         if (users.getEmail() != null) {
             userToUpdate.setEmail(users.getEmail());
         }
