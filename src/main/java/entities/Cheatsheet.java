@@ -1,24 +1,19 @@
 package entities;
 
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 
 @Entity
 @Getter
 @Setter
-@RequiredArgsConstructor
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name="cheatsheet")
 public class Cheatsheet {
 
-	public Cheatsheet(Long id, String codeLanguage, String cheatMethod, String cheatBody) {
-		this.id = id;
-		this.codeLanguage = codeLanguage;
-		this.cheatMethod = cheatMethod;
-		this.cheatBody = cheatBody;
-	}
+
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -31,5 +26,5 @@ public class Cheatsheet {
 	private String cheatBody;
 
 
-	}
+}
 

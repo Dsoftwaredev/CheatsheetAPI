@@ -1,6 +1,8 @@
 package controllers;
 
 import entities.Cheatsheet;
+import entities.CheatsheetDTO;
+import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 import repositories.CheatsheetRepo;
 
@@ -10,12 +12,17 @@ import java.util.Optional;
 @Service
 public class CheatsheetService {
 
+    private ModelMapper mapper;
     public final CheatsheetRepo repo;
 
-    public CheatsheetService(CheatsheetRepo repo) {
+    public CheatsheetService(CheatsheetRepo repo, ModelMapper mapper) {
         this.repo = repo;
+        this.mapper = mapper;
     }
 
+    public CheatsheetDTO mapToDTO(Cheatsheet cheatsheet) {
+        return mapper.map(cheatsheet, CheatsheetDTO.class);
+    }
     public List<Cheatsheet> getAllCheats() {
         return this.repo.findAll();
     }

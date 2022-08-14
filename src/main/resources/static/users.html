@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Valhalla Cheatsheets</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="users.js"></script>
+
+</head>
+<body>
+<ul>
+    <li><a href="/index.html">Home Cheats</a></li>
+    <li><a href="/users.html">Users</a></li>
+</ul>
+
+<button id="users" onclick="getUsers()">GetUsers</button>
+
+<p>Read</p>
+<div id="responseField">
+
+</div>
+
+
+<div>
+    <form id="user">
+        <h1>Create User</h1>
+        <label for="uname">Username</label>
+        <input type="text" name="uname" id="uname">
+        <label for="email">Email</label>
+        <input type="email" id="email">
+        <section class="usersubmission">
+            <input type="submit" value="submituser" id="submituser" onclick="postUser()">
+        </section>
+
+    </form>
+</div>
+
+
+<div>
+    <form id="updateuser">
+        <h1>Update User</h1>
+        <label for="updateId">ID</label>
+        <input type="number" name="updateId" id="updateId">
+        <label for="updateName">Username</label>
+        <input type="text" name="updateName" id="updateName">
+        <label for="updateEmail">Email</label>
+        <input type="email" id="updateEmail">
+        <section class="usersubmission">
+            <input type="submit" value="submitUpdateuser" id="submitUpdateuser" onclick="updateUser()">
+        </section>
+
+    </form>
+</div>
+
+<div>
+    <form id="deleteUser">
+        <h1>Delete User</h1>
+        <label for="deleteUserId">Enter ID of stock to delete</label>
+        <input type="number" name="deleteUserId" id="deleteUserId">
+        <input type="submit" value="deleteUsersubmit" id="deleteUsersubmit" onclick="deleteUser()">
+    </form>
+</div>
+
+</body>
+</html>
