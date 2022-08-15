@@ -1,9 +1,8 @@
-Coverage: 65%
+Coverage: 90%
 # Project Title
 
-This project is an Inventory Management System. It is part of the QA software pathway and is the Core Java project.
-In using this system you will be able to create customers, create items, create an order of a customer with an order then update that order with the basket.
-This system has full CRUD functionality in all those key areas and will give you a total cost of your basket.
+This project is a Cheatsheet API full crud on both the front end and back end The backend was build using Java springboot and the front end was created using vannilla html/css/js. It is part of the QA software pathway and is the practical Java project.
+This system enables you to view cheats, create cheats, update cheats and delete cheats. You will also be able to view users, create users, update users and delete users through the front end.
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
@@ -13,15 +12,16 @@ These instructions will get you a copy of the project up and running on your loc
 To Use this System you will need:
 Java 8 or later.
 SQL 5.7 or later
+A webbrowser preferablly Microsft EDGE due to issues with the javascript on more modern browsers.
 You will also need use of an IDE such as IntelliJ or Eclipse. This project was built with Maven using intelliJ.
 ```
 
 ### Installing
 
-To install this System on your machine you first need to go to Fork on the top right of your browser. Then use the navigate to code copying the HTTPS link. Set up a folder on your browser or through git bash and git clone (httpslink) you will then need to cd into your remote repository. You should then be able to open the project in the IDE you have chosen.
+To install this System on your machine you first need to go to Fork on the top right of your browser. Then use the navigate to code copying the HTTPS link. Set up a folder on your browser or through git bash and git clone (httpslink) you will then need to cd into your remote repository. You should then run the jarbuild file and navigate to localhost:8081/index.html.
 
-Here is an example of what the Crud functions look like in the command line.
-![basket](https://user-images.githubusercontent.com/106284060/177983828-12628667-cd9b-4ab9-8ccc-6a41acf0bdf9.PNG)
+Here is an example of what the site should look like on your system
+![index](https://user-images.githubusercontent.com/106284060/184560919-f33af443-4a52-4dd7-9c1e-d79f314d79b9.PNG)
 
 
 ## Running the tests
@@ -29,8 +29,9 @@ Here is an example of what the Crud functions look like in the command line.
 Once you have got the system up and running if you wish to test the methods you will find these in the test folder. You can run them with coverage which will break down what methods and lines have been tested.
 
 ### Unit Tests 
-![testcoveragerunner](https://user-images.githubusercontent.com/106284060/177984068-8c10706f-082e-4ad5-9569-9b59f9a83052.PNG)
+
 Here is an example of these tests being run. These tests determine if the expected values match the actual values which can be helpful if you wish to develop this application further.
+![testcontroller](https://user-images.githubusercontent.com/106284060/184561069-17072678-d24b-48b1-9f85-3e05d154df03.PNG)
 
 
 
@@ -45,15 +46,13 @@ If you wiish to deploy you will find a jar file in this repo.
 * mySQL
 *Gitbash version control
 *github version control
-*Jira Project Management - https://danielsoftwaredev1.atlassian.net/jira/software/projects/SCFPS/boards/1/backlog
+*Jira Project Management - 
 
 ## Versioning
 
 We use [SemVer](http://semver.org/) for versioning.
 
 ## Authors
-
-* **Chris Perrins** - *Initial work* - [christophperrins](https://github.com/christophperrins)
 * Daniel Maton-Walker - https://github.com/Dsoftwaredev
 
 ## License
