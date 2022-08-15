@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Valhalla Cheatsheets</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="cheats.js"></script>
+
+</head>
+<body>
+
+<ul>
+    <li><a href="/index.html">Home Cheats</a></li>
+    <li><a href="/users.html">Users</a></li>
+</ul>
+
+<h1 id="welcome">Welcome To Valhalla Cheatsheets</h1>
+
+<button id="cheats" onclick="getCheats()">Read Cheats</button>
+
+<p>Read</p>
+<div id="responseField">
+
+</div>
+
+<div id="addform">
+    <form id="add">
+        <label for="name">Programming Language</label>
+        <input type="text" id="cheatname" name="name" placeholder="Enter A Programming Language..">
+
+        <label for="cheatMethod">Cheat Method</label>
+        <input type="text" id="cheatmth" name="cheatMethod" placeholder="Enter The Cheat Method..">
+
+        <label for="cheatBody">The Cheat</label>
+        <input type="text" id="cheatbod" name="cheatBody" placeholder="Enter The Cheat..">
+
+
+        <input type="submit" value="Submit" id="cheatform" onclick="postCheats()" >
+    </form>
+</div>
+<div id="updateform">
+    <form id=cheatupdate">
+        <label for="updateid">ID</label>
+        <input type="number" name="id" id="updateid">
+        <label for="updatename">Programming Language</label>
+        <input type="text" id="updatename" name="updatename" placeholder="Enter A Programming Language..">
+
+        <label for="updatemethod">Cheat Method</label>
+        <input type="text" id="updatemethod" name="updatemethod" placeholder="Enter The Cheat Method..">
+
+        <label for="updateBody">The Cheat</label>
+        <input type="text" id="updateBody" name="updateBody" placeholder="Enter The Cheat..">
+
+
+        <input type="submit" value="Submit" id="updateformcheat" onclick="updateCheat()" >
+    </form>
+</div>
+<div id="deleteform">
+    <form id="deleteformone">
+        <h1>Delete Cheat</h1>
+        <label for="deleteCheatID">Enter ID of cheat to delete</label>
+        <input type="number" name="deleteCheatID" id="deleteCheatID">
+        <input type="submit" value="delete" id="deletec" onclick="deleteCheat()">
+    </form>
+</div>
+
+
+</body>
+</html>
